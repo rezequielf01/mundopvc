@@ -146,14 +146,14 @@
 
 
 <!-- about  -->
-<div id="about" class="about">
+<div id="about" class="about" style="overflow-x: hidden;">
   <div class="container">
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-        <div class="about-box">
+        <div class="about-box" style="overflow-x: hidden;">
           <h2>¿Quienes <strong class="yellow">somos?</strong></h2>
           <p> Somos <strong>Mundo PVC</strong>, nos especializamos en la <strong>venta e instalación de cielorrasos de PVC</strong>, ofreciendo soluciones innovadoras y estéticas para todos tus proyectos. Nuestros productos son ideales para cualquier ambiente, combinando elegancia y funcionalidad, y están diseñados para resistir el paso del tiempo.</p>
-          <div class="d-flex align-items-center justify-content-start">
+          <div class="d-flex align-items-center justify-content-start fade-in redes-icon-container fade-in-left" style="overflow-x: hidden;">
             <a href="https://www.facebook.com/profile.php?id=61556947629688" title="Facebook" target="_blank" class="mr-2 d-flex align-items-center justify-content-center">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
@@ -164,7 +164,7 @@
         </div>
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-        <div class="about-box">
+        <div class="about-box fade-in fade-in-right" style="overflow-x: hidden;">
           <figure><img src="images/about.jpg" alt="#" /></figure>
         </div>
       </div>
@@ -197,7 +197,7 @@
 
 <!-- end our -->
 <!-- Courses -->
-<div id="courses" class="Courses">
+<div id="courses" class="Courses" style="overflow-x: hidden;">
   <div class="container-fluid padding_left3">
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -205,7 +205,7 @@
           <div class="box_bg_img">
             <div class="row">
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <div class="box_my">
+                <div class="box_my fade-in fade-in-left">
                   <figure><img src="images/my1.jpg"></figure>
                   <div class="overlay">
                     <h3>Abedul</h3>
@@ -214,7 +214,7 @@
                 </div>
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <div class="box_my">
+                <div class="box_my fade-in fade-in-left">
                   <figure><img src="images/my2.jpg"></figure>
                   <div class="overlay">
                     <h3>Ebano</h3>
@@ -223,7 +223,7 @@
                 </div>
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <div class="box_my">
+                <div class="box_my fade-in fade-in-left">
                   <figure><img src="images/my3.jpg"></figure>
                   <div class="overlay">
                     <h3>Algarrobo</h3>
@@ -232,7 +232,7 @@
                 </div>
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <div class="box_my">
+                <div class="box_my" fade-in fade-in-left>
                   <figure><img src="images/my4.jpg"></figure>
                   <div class="overlay">
                     <h3>Fresno</h3>
@@ -248,12 +248,12 @@
         </div>
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 border_right">
-        <div class="box_text">
+        <div class="box_text" style="overflow-x: hidden;">
           <div class="titlepage">
               <h2>Puertas de <strong class="yellow">PVC</strong></h2>
           </div>
           <p>Descubre la elegancia y versatilidad de nuestras puertas de PVC en hermosos acabados como abedul, algarrobo, fresno y ébano. Estas puertas no solo embellecen tu hogar, sino que también ofrecen durabilidad y resistencia al desgaste. Perfectas para cualquier estilo decorativo, añaden un toque moderno y sofisticado a tus espacios. ¡Haz de tu entrada una declaración de estilo con nuestras puertas de PVC!</p>
-          <a href="https://wa.me/541141565557?text=Hola+estoy+interesad@+en+las+puertas+de+pvc.+Necesito+asesoramiento" style="background-color: #3d506e;">¡La quiero!</a>
+          <a class="box_txt-a fade-in fade-in-right" href="https://wa.me/541141565557?text=Hola+estoy+interesad@+en+las+puertas+de+pvc.+Necesito+asesoramiento" style="background-color: #3d506e;">¡La quiero!</a>
       </div>
       </div> 
     </div>
@@ -448,6 +448,36 @@
   ]
 });
  </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  // Selecciona los elementos a observar
+  const targets = document.querySelectorAll(".redes-icon-container.fade-in, .about-box.fade-in, .box_my.fade-in, .box_txt-a.fade-in");
+
+  // Define la función que será llamada cuando el elemento entre o salga del viewport
+  const observerCallback = (entries, observer) => {
+     entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        // Añade la clase 'visible' cuando el elemento esté en el viewport
+        entry.target.classList.add("visible");
+        // Deja de observar el elemento si ya se ha visto
+        observer.unobserve(entry.target);
+        }
+     });
+  };
+
+  // Crea un Intersection Observer
+  const observer = new IntersectionObserver(observerCallback, {
+     root: null, // Usa el viewport del navegador
+     rootMargin: '0px',
+     threshold: 0.5 // Cuánto del elemento debe estar visible para activar la función
+  });
+
+  // Comienza a observar los elementos
+  targets.forEach(target => observer.observe(target));
+  });
+</script>
 
 
           
