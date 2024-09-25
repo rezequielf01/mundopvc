@@ -513,6 +513,9 @@ line-height: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     row-gap: 25px;
+    column-gap: 25px;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .machimbres-box1 { 
