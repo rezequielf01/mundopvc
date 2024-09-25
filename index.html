@@ -28,6 +28,8 @@
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
 </head>
 <!-- body -->
 
@@ -187,8 +189,9 @@
       </div>
     </div>
   </div>
-  <div class="important_bg d-flex align-items-center justify-content-center">
-    <span>¡Cotización sin cargo!</span>
+  <div class="important_bg d-flex flex-column align-items-center justify-content-center">
+    <span style="text-align: center;">¡HACE TU COTIZACIÓN SIN CARGO Y PAGÁS AL RECIBIR!</span>
+    <p style="color: #f1f1f1; font-size: 1.5rem;">Contamos con envios propios en Buenos Aires y Gran Buenos Aires  </p>
   </div>
 </div>
 </div>
@@ -263,14 +266,63 @@
 
 
 <div id="learn" class="learn">
+
   <div class="container">
+
     <div class="row">
+
       <div class="col-md-12">
+
         <div class="titlepage">
+
           <h2>Cielorrasos de <strong class="yellow">PVC</strong></h2>
-          <span>Transforma tu espacio con nuestros cielorrasos de PVC, que ofrecen una combinación perfecta de estilo y funcionalidad. Resistente a la humedad y fácil de mantener, son ideales para cualquier ambiente. Con una variedad de diseños y colores, cada instalación no solo mejora la estética, sino que también aporta durabilidad y confort a tu hogar.</span>
+          <span>Transforma tu espacio con nuestros <strong>cielorrasos de PVC</strong> de 7 mm de espesor, 6 metros de largo y 20 cm de ancho, que ofrecen una combinación perfecta de estilo y funcionalidad. Resistentes a la humedad y fáciles de mantener, son ideales para cualquier ambiente. Con una variedad de diseños y colores, cada instalación no solo mejora la estética, sino que también aporta durabilidad y confort a tu hogar</span>
+          
+          <div class="machimbres-grid">
+            
+            <div class="machimbres-box1">
+              <a href="images/machimbre-negro.jpeg" data-fancybox="gallery" data-caption="Caption #1">
+                <img src="images/machimbre-negro.jpeg" />
+              </a>
+            </div>
+
+            <div class="machimbres-box2">
+              <a href="images/machimbre-negro2.jpeg" data-fancybox="gallery" data-caption="Caption #2">
+                <img src="images/machimbre-negro2.jpeg" />
+              </a>
+            </div>
+
+            <div class="machimbres-box3">
+              <a href="images/machimbre-blanco.jpeg" data-fancybox="gallery" data-caption="Caption #3">
+                <img src="images/machimbre-blanco.jpeg" />
+              </a>
+            </div>
+
+            <div class="machimbres-box4">
+              <a href="images/machimbre-blanco2.jpeg" data-fancybox="gallery" data-caption="Caption #4">
+                <img src="images/machimbre-blanco2.jpeg" />
+              </a>
+            </div>
+
+            <div class="machimbres-box5">
+              <a href="images/machimbre-haya.jpeg" data-fancybox="gallery" data-caption="Caption #5">
+                <img src="images/machimbre-haya.jpeg" />
+              </a>
+            </div>
+
+            <div class="machimbres-box6">
+              <a href="images/machimbre-cedro.jpeg" data-fancybox="gallery" data-caption="Caption #6">
+                <img src="images/machimbre-cedro.jpeg" />
+              </a>
+            </div>
+
+          </div>
+
+
+        </div>
+
       </div>
-      </div>
+
     </div>
 
     <div class="carousel-inner">
@@ -381,6 +433,7 @@
 
           <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
           <script>
             document.getElementById('request').addEventListener('submit', function(event) {
@@ -448,6 +501,49 @@
  </script>
 
 
+<!-- CAROUSEL -->
+ <script>
+  $('.machimbres-box-isdmg').slick({
+  dots: false,
+  infinite: true,
+  arrows: false,
+  autoplay: true,
+  speed: 400,
+  autoplaySpeed: 5000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+ </script>
+
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
   // Selecciona los elementos a observar
@@ -482,6 +578,7 @@
 <!-- google map js -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
 <!-- end google map js -->
+ 
 
 
 

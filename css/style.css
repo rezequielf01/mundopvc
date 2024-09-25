@@ -1440,9 +1440,6 @@ margin-top: 20px;
 
 
 
-
-
-
  .titlepage {
     text-align: center;
      padding-bottom: 60px;
@@ -1457,6 +1454,52 @@ margin-top: 20px;
      font-size: 50px;
 }
 
+.machimbres-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin-top: 25px;
+}
+
+.machimbres-box1 { 
+    grid-area: 1 / 1 / 2 / 2;
+ }
+.machimbres-box2 { 
+    grid-area: 1 / 2 / 2 / 3;
+ }
+.machimbres-box3 { 
+    grid-area: 1 / 3 / 2 / 4;
+ }
+.machimbres-box4 { 
+    grid-area: 1 / 4 / 2 / 5;
+ }
+.machimbres-box5 { 
+    grid-area: 1 / 5 / 2 / 6;
+ }
+.machimbres-box6 { 
+    grid-area: 1 / 6 / 2 / 7;
+ }
+
+
+.machimbres-box-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-area: 1 / 2 / 2 / 3;
+}
+.machimbres-box-txt h4{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.machimbres-box img{
+    width: 100%;
+    height: 100%;
+}
 
 /** contact section **/
 
