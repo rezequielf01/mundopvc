@@ -87,32 +87,47 @@
 
      <!-- end header -->
      <section class="slider_section">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
 
-            <div class="container-fluid padding_dd">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item">
+
+            <div class="container-fluid">
               <div class="carousel-caption">
                 <div class="row">
-                  <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
-                    <div class="text-bg">
-                      <h1>¿Estás buscando cambiar el aspecto de tu techo?</h1>
-                      <p>Diseños innovadores y duraderos para cada ambiente, ideales para una estética moderna y funcional.</p>
-                      <a href="#contact">Presupuestar</a>
-                    </div>
-                  </div>
-                  <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                     <div class="images_box">
-                      <figure><img src="images/img2.png"></figure>
+                      <figure><img class="images_box-img" src="images/carousel-img1.png"></figure>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            
+          </div>
+
+          <div class="carousel-item">
+
+            <div class="container-fluid">
+              <div class="carousel-caption">
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="images_box">
+                      <figure><img class="images_box-img" src="images/carousel-img2.png"></figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
 
         </div>
+
       </div>
+
     </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -372,6 +387,49 @@
                }
             });
          </script>
+
+
+<!-- CAROUSEL -->
+ <script>
+  $('.carousel-inner').slick({
+  dots: false,
+  infinite: true,
+  arrows: false,
+  autoplay: true,
+  speed: 400,
+  autoplaySpeed: 5000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+ </script>
 
 
           
