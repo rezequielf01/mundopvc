@@ -1481,11 +1481,12 @@ margin-top: 20px;
 .machimbres-slide p{
     color: #f1f1f1;
     font-weight: bold;
-    background: #114c7d;;
+    background: #114c7d;
 }
 
 .machimbres-slide_img{
     width: 100%;
+    height: 133px;
 }
 
 
