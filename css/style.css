@@ -1457,12 +1457,17 @@ margin-top: 20px;
 
 /* SLIDER - MACHIMBRES */
 
+.cielorrasos-info{
+    display: flex;
+    text-align: left;
+    gap: 5px;
+}
+
 .slider-machimbres{
     width: 100%;
     height: auto;
     margin: auto;
     overflow-x: hidden;
-    margin-top: 35px;
 }
 
 .machimbres-track{

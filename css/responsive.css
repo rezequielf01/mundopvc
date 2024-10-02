@@ -447,6 +447,10 @@ line-height: 20px;
      .slider_section {
         padding-top: 95px;
     }
+    .about{
+        padding: 0;
+    }
+    .learn {padding-top: 30px;}
     .about .about-box h2 {
         line-height: 36px;
         font-size: 27px;
@@ -506,6 +510,21 @@ line-height: 20px;
         width: 100%;
         height: 200px;
         max-height: 200px;
+   }
+
+
+   .cielorrasos-info{
+        flex-direction: column;
+    }
+
+    .cielorrasos-info img{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+
+   .slider-machimbres{
+    margin-top: 30px;
    }
 
    .machimbres-grid {
